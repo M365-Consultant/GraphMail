@@ -9,7 +9,7 @@ _Feel free to share any feature requests with me!_
 # Installation
 The module is published on [PowerShell Gallery](https://www.powershellgallery.com/packages/M365cde.GraphMail/) and can be installed with this command within a powershell console:
 
-    Install-Module -Name M365cde.GraphMail -AllowPrerelease -Scope CurrentUser
+    Install-Module -Name M365cde.GraphMail -Scope CurrentUser
 
 # Usage
 To use the module u can use the function
