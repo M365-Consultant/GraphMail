@@ -12,7 +12,7 @@
 RootModule = 'M365cde.GraphMail.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.0'
+ModuleVersion = '1.0.1'
 
 # Supported PSEditions
  CompatiblePSEditions = @( 'Desktop', 'Core' )
@@ -78,6 +78,9 @@ PrivateData = @{
 
         # ReleaseNotes of this module
         ReleaseNotes = @'
+v1.0.1 - 2024-05-21
+Change the module check onto Microsoft.Graph.Authentication and Microsoft.Graph.Users.Actions, so only those are required to run the function.
+
 v1.0.0 - 2024-05-21
 First final release of the module.
 

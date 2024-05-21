@@ -35,10 +35,15 @@ Param
 )
 
 #Check if the Microsoft Graph module is imported
-If (-not (Get-Module -ListAvailable -Name Microsoft.Graph)) {
-    Write-Error "Microsoft.Graph module is not imported. Please import the Microsoft.Graph module first."
+If (-not (Get-Module -ListAvailable -Name Microsoft.Graph.Authentication)) {
+    Write-Error "Microsoft.Graph.Authentication module is not imported. Please import the Microsoft.Graph.Authentication module first."
     break
 }
+If (-not (Get-Module -ListAvailable -Name Microsoft.Graph.Users.Actions)) {
+    Write-Error "Microsoft.Graph.Users.Actions module is not imported. Please import the Microsoft.Graph.Users.Actions module first."
+    break
+}
+
 # Check if there is an active connection to Microsoft Graph
 If (-not (Get-MgContext)) {
     Write-Error "No active connection to Microsoft Graph. Please connect to Microsoft Graph first."
@@ -212,21 +217,3 @@ if ($PSCmdlet.ShouldProcess("Mail send operation: `n" +
 
 
 Export-ModuleMember -Function Send-M365cdeMail
-
-<# Github Description
-
-To use the module u can use the function
-```
-Send-M365cdeMail
-```
-
-Sample usage:
-```
-Send-M365cdeMail -Sender 'john.doe@contoso.com' -Recipient $mailRecipient -Subject 'Report' -Content "<b>Attached you'll find the report.</b>" -AttachmentPath 'C:\Temp\Report.pdf' -SaveToSentItems -Importance 'High'
-```
-
-There are multiple parameters available to customize the mail:
-```
-Send-M365cdeMail -Sender [string] -Recipient [psobject] -CC [psobject] -BCC [psobject] -Subject [string] -Content [string] -AttachmentPath [psobject] -SaveToSentItems [switch] -Importance [string]
-
-#>

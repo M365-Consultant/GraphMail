@@ -2,9 +2,12 @@
 This function can be used for sending e-mails over Microsoft Graph. It is using the Microsoft.Graph module with the cmdlet Send-MgUserMail to send e-mails over Microsoft Exchange Online. It could be used within a script or a Azure Automation Runbook.
 There are multiple parameters available to customize the mail. The sender, recipient, CC, BCC, subject, content, attachment, importance, and reply to address can be customized. 
 
-_This module is currently in development and will receive additional features and functions in the future._
-
 _Feel free to share any feature requests with me!_
+
+# Dependencies
+The module requires this modules to be installed and imported:
+- Microsoft.Graph.Authentication
+- Microsoft.Graph.Users.Actions
 
 # Installation
 The module is published on [PowerShell Gallery](https://www.powershellgallery.com/packages/M365cde.GraphMail/) and can be installed with this command within a powershell console:
@@ -38,6 +41,8 @@ Send-M365cdeMail -Sender 'john.doe@contoso.com' -Recipient $mailRecipient -Subje
 ```
 
 # Changelog
+- v1.0.1 Changed Module-Check to
+  - Change onto Microsoft.Graph.Authentication and Microsoft.Graph.Users.Actions, so only those are required to run the function.
 - v1.0.0 First final release
   - Release after testing the functions with multiple inputs
   - With this release the module is available on PSGallery API 2.0
