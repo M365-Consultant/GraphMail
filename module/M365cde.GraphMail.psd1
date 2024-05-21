@@ -12,7 +12,7 @@
 RootModule = 'M365cde.GraphMail.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.1'
+ModuleVersion = '1.0.0'
 
 # Supported PSEditions
  CompatiblePSEditions = @( 'Desktop', 'Core' )
@@ -76,11 +76,11 @@ PrivateData = @{
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/M365-Consultant/GraphMail'
 
-        # Pre-release string for the module
-        Prerelease = 'alpha'
-
         # ReleaseNotes of this module
         ReleaseNotes = @'
+v1.0.0 - 2024-05-21
+First final release of the module.
+
 v0.0.1 - 2024-05-21
 Initial release of the module.
 '@

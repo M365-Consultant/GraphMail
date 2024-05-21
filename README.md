@@ -38,5 +38,8 @@ Send-M365cdeMail -Sender 'john.doe@contoso.com' -Recipient $mailRecipient -Subje
 ```
 
 # Changelog
+- v1.0.0 First final release
+  - Release after testing the functions with multiple inputs
+  - With this release the module is available on PSGallery API 2.0
 - v0.0.1 First release
   - First release of this script
